@@ -1,0 +1,22 @@
+.toDo{
+    background-color: #61dafb;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    padding: 30px;
+}
+
+.title{
+    color: white;
+    font-size: 130px;
+    font-weight: bold;
+    margin-top: -80px;
+}
+
+.contentContainer{
+    background-color: #c1fffd;
+    width: 100%;
+    height: 65%;
+}
