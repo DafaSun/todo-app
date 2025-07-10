@@ -11,6 +11,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    --background: #1E90FF;
+    --light-background: #bbeafd;
+    --main-title: #f5f5f5;
+    --color-error: #FF4C4C;
+  --border-color: #1c3249;
+
+  --normal-text: 18px;
+  --big-text: 28px;
+  --title-text: 130px;
+  --border-width: 2px;
+  --big-border-radius: 15px;
+  --small-border-radius: 5px;
 }
 
 a {

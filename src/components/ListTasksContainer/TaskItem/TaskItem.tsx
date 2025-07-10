@@ -1,21 +1,34 @@
 import styles from './TaskItem.module.css';
-import {CheckCircle, Circle} from "lucide-react";
+import {CheckCircle, Circle, Delete} from "lucide-react";
 import type {Task} from "../../../types/Task.ts";
+import {toggleTaskComplete} from "../../../services/toggleTaskComplete.ts";
+import {deleteTask} from "../../../services/deleteTask.ts";
 
 interface TaskItemProps {
     task: Task;
+    setUpdate?: (a: string) => void;
 }
 
-export default function TaskItem({ task }: TaskItemProps) {
-    function onClick() {
-        task.completed=!task.completed;
+export default function TaskItem({ task , setUpdate=(a:string)=>{} }: TaskItemProps) {
+    function onClickToggleCompleted() {
+        toggleTaskComplete(task.id, task.completed);
+        setUpdate('toggleCompleted'+new Date().toString())
+    }
+
+    function onClickDelete() {
+        deleteTask(task.id);
+        setUpdate('toggleCompleted'+new Date().toString())
     }
 
     return (
         <div className={styles.task}>
-            <CheckCircle className={task.completed?'':styles.hidden} onClick={onClick}/>
-            <Circle className={task.completed?styles.hidden:''} onClick={onClick}/>
+            <div className={styles.taskCompleted}  onClick={onClickToggleCompleted}>
+            <CheckCircle className={task.completed?'':styles.hidden} />
+            <Circle className={task.completed?styles.hidden:''} />
             <span className={styles.text}>{task.name}</span>
+
+            </div>
+            <Delete size={25} onClick={onClickDelete}/>
         </div>
     );
 }

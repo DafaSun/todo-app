@@ -1,7 +1,10 @@
-.header{
+.loading{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--big-text);
+    gap: 3rem;
     width: 100%;
     height: fit-content;
     padding: 15px;
@@ -9,12 +12,6 @@
     background-color: var(--light-background);
     box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
     border: none;
-    /*border-color: var(--border-color);*/
+    /*border-color: #000;*/
     /*border-style: solid;*/
-}
-
-.title {
-    text-align: left;
-    color: black;
-    font-size: var(--big-text);
 }

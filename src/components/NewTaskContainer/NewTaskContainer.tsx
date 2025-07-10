@@ -1,9 +1,43 @@
 import styles from './NewTaskContainer.module.css';
+import {useState} from "react";
+import {ChevronDown, Check} from "lucide-react";
+import {addNewTask} from "../../services/addNewTask.ts";
 
-export default function NewTaskContainer() {
+interface NewTaskContainerProps {
+    title: string;
+    setUpdate?: (a: string) => void;
+}
+
+export default function NewTaskContainer({ title, setUpdate=(a:string)=>{} }: NewTaskContainerProps) {
+    const [text, setText] = useState<string>('');
+
+    const handleSubmit = async () => {
+        if (text!='') {
+            setUpdate('addNewTask' + new Date().toString());
+            addNewTask(text);
+            setText('');
+        }
+    };
+
     return (
         <div className={styles.inputContainer}>
+            <div className={styles.inputTitle}>
+                <ChevronDown size={20}/>
+                <div className={styles.text}>
+                    {title}
+                </div>
+            </div>
 
+            <input
+                type="text"
+                value={text}
+                onChange={e => setText(e.target.value)}
+                placeholder=""
+            />
+
+            <button className={styles.save} onClick={handleSubmit}>
+                <Check size={30} strokeWidth={3}/>
+            </button>
 
         </div>
     );

@@ -1,11 +1,49 @@
 .footer{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     width: 100%;
     height: fit-content;
-    border-color: #000;
-    border-style: solid;
     padding: 15px;
     box-sizing: border-box;
+    background-color: var(--light-background);
+    box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
+    border: none;
+    /*border-color: var(--border-color);*/
+    /*border-style: solid;*/
+    border-bottom-left-radius: var(--big-border-radius);
+    border-bottom-right-radius: var(--big-border-radius);
+}
+
+.notActiveBtn, .activeBtn{
+    border-color:  var(--border-color);
+    border-width: var(--border-width);
+    width: fit-content;
+    font-size: var(--normal-text);
+    border-radius: var(--small-border-radius);
+}
+
+.notActiveBtn{
+    background: none;
+}
+
+.activeBtn{
+    background: white;
+}
+
+.clearBtn{
+    font-size: var(--normal-text);
+    background: none;
+    border-color: white;
+    border-width: var(--border-width);
+    border-radius: var(--small-border-radius);
+}
+
+.notActiveBtn :hover, .activeBtn :hover, .clearBtn:hover{
+    border-color: var(--background);
+}
+
+.clearBtn:hover{
+    background-color: var(--background);
 }

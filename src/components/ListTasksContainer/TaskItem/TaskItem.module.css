@@ -1,13 +1,32 @@
 .task{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: fit-content;
-    border-color: black;
-    border-style: solid;
     box-sizing: border-box;
     padding: 15px;
+    font-size: var(--normal-text);
+    box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
+    border: none;
+    /*border-color: var(--border-color);*/
+    /*border-style: solid;*/
+}
+
+.taskCompleted{
+    display: flex;
+    align-items: center;
+    font-size: var(--normal-text);
+}
+
+.text{
+    padding-left: 10px;
 }
 
 .hidden{
     display: none;
+}
+
+.task :hover{
+    cursor: pointer;
 }

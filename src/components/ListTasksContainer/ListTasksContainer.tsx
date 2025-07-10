@@ -4,13 +4,14 @@ import type {Task} from "../../types/Task.ts";
 
 interface ListTasksContainerProps {
     tasks: Task[];
+    setUpdate?: (a: string) => void;
 }
 
-export default function ListTasksContainer({ tasks }: ListTasksContainerProps) {
+export default function ListTasksContainer({ tasks , setUpdate=(a:string)=>{}}: ListTasksContainerProps) {
     return (
         <div className={styles.tasksContainer}>
             {tasks.map((task, index) => (
-                <TaskItem key={index} task={task} />
+                <TaskItem key={index} task={task} setUpdate={setUpdate} />
             ))}
         </div>
     );
