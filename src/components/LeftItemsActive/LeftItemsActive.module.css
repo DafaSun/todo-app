@@ -19,5 +19,5 @@
 }
 
 .flameIcon{
-    color: ;
+    color: var(--border-color);
 }
