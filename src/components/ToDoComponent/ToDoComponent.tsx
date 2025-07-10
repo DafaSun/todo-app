@@ -8,6 +8,7 @@ import {useEffect, useState} from "react";
 import type {Task} from "../../types/Task.ts";
 import {loadTasks} from "../../services/loadTasks.ts";
 import Loading from "../Loading/Loading.tsx";
+import LeftItemsActive from "../LeftItemsActive/LeftItemsActive.tsx";
 
 export default function ListContainer() {
     const [listType, setListType] = useState<string>('all')
@@ -58,8 +59,9 @@ export default function ListContainer() {
                 ) : (
                     <ListTasksContainer tasks={filteredTasks} setUpdate={setUpdate}/>
                 )}
-                <ListFooterContainer leftItemsNumber={leftActive} listType={listType} setListType={setListType}
+                <ListFooterContainer itemsNumber={loading ? '...' : filteredTasks.length} listType={listType} setListType={setListType}
                                      setUpdate={setUpdate}/>
+                <LeftItemsActive leftItemsNumber={leftActive}/>
             </div>
         </div>
     );

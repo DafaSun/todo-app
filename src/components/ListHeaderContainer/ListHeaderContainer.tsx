@@ -1,5 +1,5 @@
 import styles from './ListHeaderContainer.module.css';
-import { ChevronDown } from 'lucide-react';
+import {BookText} from 'lucide-react';
 
 interface ListHeaderContainerProps {
     title: string;
@@ -8,7 +8,7 @@ interface ListHeaderContainerProps {
 export default function ListHeaderContainer({ title }: ListHeaderContainerProps) {
     return (
         <div className={styles.header}>
-            <ChevronDown size={20} />
+            <BookText size={25} />
             <div className={styles.title}>
                 {title}
             </div>

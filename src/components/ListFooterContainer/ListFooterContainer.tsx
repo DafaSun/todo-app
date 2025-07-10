@@ -3,14 +3,14 @@ import {loadTasks} from "../../services/loadTasks.ts";
 import {deleteTask} from "../../services/deleteTask.ts";
 
 interface ListFooterContainerProps {
-    leftItemsNumber: number | string;
+    itemsNumber: number | string;
     listType: string;
     setListType: (a: string) => void;
     setUpdate?: (a: string) => void;
 }
 
 export default function ListFooterContainer({
-                                                leftItemsNumber, listType, setListType, setUpdate = (a: string) => {
+                                                itemsNumber, listType, setListType, setUpdate = (a: string) => {
     }
                                             }: ListFooterContainerProps) {
     async function onClick() {
@@ -26,7 +26,7 @@ export default function ListFooterContainer({
 
     return (
         <div className={styles.footer}>
-            <div className={styles.leftItems}>{leftItemsNumber} items left</div>
+            <div className={styles.leftItems}>{itemsNumber} items left</div>
             <button className={listType == 'all' ? styles.activeBtn : styles.notActiveBtn}
                     onClick={() => {
                         setListType('all')

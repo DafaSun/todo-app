@@ -1,6 +1,6 @@
 import styles from './NewTaskContainer.module.css';
 import {useState} from "react";
-import {ChevronDown, Check} from "lucide-react";
+import { Check, Pencil} from "lucide-react";
 import {addNewTask} from "../../services/addNewTask.ts";
 
 interface NewTaskContainerProps {
@@ -22,7 +22,7 @@ export default function NewTaskContainer({ title, setUpdate=(a:string)=>{} }: Ne
     return (
         <div className={styles.inputContainer}>
             <div className={styles.inputTitle}>
-                <ChevronDown size={20}/>
+                <Pencil size={20}/>
                 <div className={styles.text}>
                     {title}
                 </div>
