@@ -6,12 +6,11 @@ interface ListFooterContainerProps {
     itemsNumber: number | string;
     listType: string;
     setListType: (a: string) => void;
-    setUpdate?: (a: string) => void;
+    setUpdate: (a: string) => void;
 }
 
 export default function ListFooterContainer({
-                                                itemsNumber, listType, setListType, setUpdate = (a: string) => {
-    }
+                                                itemsNumber, listType, setListType, setUpdate
                                             }: ListFooterContainerProps) {
     async function onClick() {
         const loadedTasks = await loadTasks();

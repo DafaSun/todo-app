@@ -5,10 +5,10 @@ import {addNewTask} from "../../services/addNewTask.ts";
 
 interface NewTaskContainerProps {
     title: string;
-    setUpdate?: (a: string) => void;
+    setUpdate: (a: string) => void;
 }
 
-export default function NewTaskContainer({ title, setUpdate=(a:string)=>{} }: NewTaskContainerProps) {
+export default function NewTaskContainer({ title, setUpdate }: NewTaskContainerProps) {
     const [text, setText] = useState<string>('');
 
     const handleSubmit = async () => {

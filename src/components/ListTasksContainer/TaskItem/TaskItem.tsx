@@ -6,10 +6,10 @@ import {deleteTask} from "../../../services/deleteTask.ts";
 
 interface TaskItemProps {
     task: Task;
-    setUpdate?: (a: string) => void;
+    setUpdate: (a: string) => void;
 }
 
-export default function TaskItem({ task , setUpdate=(a:string)=>{} }: TaskItemProps) {
+export default function TaskItem({ task , setUpdate }: TaskItemProps) {
     function onClickToggleCompleted() {
         toggleTaskComplete(task.id, task.completed);
         setUpdate('toggleCompleted'+new Date().toString())

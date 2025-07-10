@@ -1,7 +1,4 @@
-import styles from './LeftItemsActive.module.css';
-import {loadTasks} from "../../services/loadTasks.ts";
-import {deleteTask} from "../../services/deleteTask.ts";
-import {CgDanger} from "react-icons/cg";
+import styles from './LeftItemsActive.module.css'
 import {Flame} from "lucide-react";
 
 interface LeftItemsActiveProps {
