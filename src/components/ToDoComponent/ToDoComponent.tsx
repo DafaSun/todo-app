@@ -9,6 +9,7 @@ import type {Task} from "../../types/Task.ts";
 import {loadTasks} from "../../services/loadTasks.ts";
 import Loading from "../Loading/Loading.tsx";
 import LeftItemsActive from "../LeftItemsActive/LeftItemsActive.tsx";
+import EmptyList from "../EmptyList/EmptyList.tsx";
 
 export default function ListContainer() {
     const [listType, setListType] = useState<string>('all')
@@ -55,13 +56,17 @@ export default function ListContainer() {
                 <NewTaskContainer title={'Enter a new task:'} setUpdate={setUpdate}/>
                 <ListHeaderContainer title={'What needs to be done?'}/>
                 {loading ? (
-                    <Loading/>
-                ) : (
-                    <ListTasksContainer tasks={filteredTasks} setUpdate={setUpdate}/>
-                )}
-                <ListFooterContainer itemsNumber={loading ? '...' : filteredTasks.length} listType={listType} setListType={setListType}
+                        <Loading/>
+                    ) :
+                    filteredTasks.length == 0 ? (
+                        <EmptyList/>
+                    ) : (
+                        <ListTasksContainer tasks={filteredTasks} setUpdate={setUpdate}/>
+                    )}
+                <ListFooterContainer itemsNumber={loading ? '...' : filteredTasks.length} listType={listType}
+                                     setListType={setListType}
                                      setUpdate={setUpdate}/>
-                <LeftItemsActive leftItemsNumber={leftActive}/>
+                <LeftItemsActive leftItemsNumber={loading ? '...' : leftActive}/>
             </div>
         </div>
     );

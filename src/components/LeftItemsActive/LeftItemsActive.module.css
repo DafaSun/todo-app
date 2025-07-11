@@ -1,6 +1,7 @@
 .leftItems{
     display: flex;
     align-items: center;
+    align-self: end;
     gap: 1rem;
     width: 100%;
     height: fit-content;
@@ -9,8 +10,6 @@
     background-color: var(--light-background);
     box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
     border: none;
-    /*border-color: var(--border-color);*/
-    /*border-style: solid;*/
     border-bottom-left-radius: var(--big-border-radius);
     border-bottom-right-radius: var(--big-border-radius);
     text-align: left;

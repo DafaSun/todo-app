@@ -8,6 +8,7 @@
     padding: 30px;
     overflow: hidden;
     border-radius: var(--big-border-radius);
+    font-family: 'Roboto';
 }
 
 .title{
@@ -24,7 +25,4 @@
     background-color: var(--light-background);
     border-radius: var(--big-border-radius);
     box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
-    /*border-color: var(--border-color);*/
-    /*border-width: var(--border-width);*/
-    /*border-style: solid;*/
 }

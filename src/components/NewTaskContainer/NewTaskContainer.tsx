@@ -32,10 +32,10 @@ export default function NewTaskContainer({ title, setUpdate }: NewTaskContainerP
                 type="text"
                 value={text}
                 onChange={e => setText(e.target.value)}
-                placeholder=""
+                placeholder="Enter a new task"
             />
 
-            <button className={styles.save} onClick={handleSubmit}>
+            <button className={styles.save}  aria-label="Add task" onClick={handleSubmit}>
                 <Check size={30} strokeWidth={3}/>
             </button>
 

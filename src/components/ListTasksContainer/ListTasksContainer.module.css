@@ -2,16 +2,14 @@
     width: 100%;
     background-color: var(--light-background);
     max-height: 220px;
+    min-height: 220px;
     overflow-y: auto;
+    box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
+    border: none;
 }
 
 .tasksContainer::-webkit-scrollbar {
     width: 6px;
-    /*border-right-color: var(--border-color);*/
-    /*border-right-width: 1px;*/
-    /*background-color: var(--border-color);*/
-    /*border-radius: var(--small-border-radius);*/
-    /*border-width: 0.2rem;*/
     box-shadow: inset 0 0 0  var(--border-width)  var(--border-color);
     border: none;
 }
