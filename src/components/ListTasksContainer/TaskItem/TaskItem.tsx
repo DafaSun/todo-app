@@ -28,7 +28,7 @@ export default function TaskItem({ task , setUpdate }: TaskItemProps) {
             <span className={styles.text}>{task.name}</span>
 
             </div>
-            <button className={styles.deleteTask} onClick={onClickDelete} aria-label="delete task" title="delete task">
+            <button className={styles.deleteTask} onClick={onClickDelete} aria-label={"delete "+task.name} title={"delete "+task.name}>
                 <Delete size={25}/>
             </button>
         </div>
