@@ -1,6 +1,6 @@
 import styles from './ListFooterContainer.module.css';
-import {loadTasks} from "../../services/loadTasks.ts";
-import {deleteTask} from "../../services/deleteTask.ts";
+import {loadTasks} from "../../services/loadTasks";
+import {deleteTask} from "../../services/deleteTask";
 
 interface ListFooterContainerProps {
     itemsNumber: number | string;

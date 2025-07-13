@@ -1,8 +1,8 @@
 import styles from './TaskItem.module.css';
 import {CheckCircle, Circle, Delete} from "lucide-react";
 import type {Task} from "../../../types/Task.ts";
-import {toggleTaskComplete} from "../../../services/toggleTaskComplete.ts";
-import {deleteTask} from "../../../services/deleteTask.ts";
+import {toggleTaskComplete} from "../../../services/toggleTaskComplete";
+import {deleteTask} from "../../../services/deleteTask";
 
 interface TaskItemProps {
     task: Task;

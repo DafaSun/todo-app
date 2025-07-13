@@ -1,6 +1,6 @@
 import styles from './ListTasksContainer.module.css';
 import TaskItem from "./TaskItem/TaskItem";
-import type {Task} from "../../types/Task.ts";
+import type {Task} from "../../types/Task";
 
 interface ListTasksContainerProps {
     tasks: Task[];

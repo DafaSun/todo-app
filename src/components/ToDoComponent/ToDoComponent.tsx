@@ -1,15 +1,15 @@
 import styles from './ToDoComponent.module.css';
-import ListHeaderContainer from "../ListHeaderContainer/ListHeaderContainer.tsx";
-import ListTasksContainer from "../ListTasksContainer/ListTasksContainer.tsx";
+import ListHeaderContainer from "../ListHeaderContainer/ListHeaderContainer";
+import ListTasksContainer from "../ListTasksContainer/ListTasksContainer";
 
-import ListFooterContainer from "../ListFooterContainer/ListFooterContainer.tsx";
-import NewTaskContainer from "../NewTaskContainer/NewTaskContainer.tsx";
+import ListFooterContainer from "../ListFooterContainer/ListFooterContainer";
+import NewTaskContainer from "../NewTaskContainer/NewTaskContainer";
 import {useEffect, useState} from "react";
-import type {Task} from "../../types/Task.ts";
-import {loadTasks} from "../../services/loadTasks.ts";
-import Loading from "../Loading/Loading.tsx";
-import LeftItemsActive from "../LeftItemsActive/LeftItemsActive.tsx";
-import EmptyList from "../EmptyList/EmptyList.tsx";
+import type {Task} from "../../types/Task";
+import {loadTasks} from "../../services/loadTasks";
+import Loading from "../Loading/Loading";
+import LeftItemsActive from "../LeftItemsActive/LeftItemsActive";
+import EmptyList from "../EmptyList/EmptyList";
 
 export default function ListContainer() {
     const [listType, setListType] = useState<string>('all')

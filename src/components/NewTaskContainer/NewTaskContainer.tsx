@@ -1,7 +1,7 @@
 import styles from './NewTaskContainer.module.css';
 import {useState} from "react";
 import { Check, Pencil} from "lucide-react";
-import {addNewTask} from "../../services/addNewTask.ts";
+import {addNewTask} from "../../services/addNewTask";
 
 interface NewTaskContainerProps {
     title: string;
